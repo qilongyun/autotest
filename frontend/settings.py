@@ -41,15 +41,6 @@ if AUTOTEST_DEFAULT['READONLY_USER'] != AUTOTEST_DEFAULT['USER']:
 else:
     AUTOTEST_DEFAULT['READONLY_PASSWORD'] = AUTOTEST_DEFAULT['PASSWORD']
 
-SOUTH_BACKENDS = {
-    'autotest.frontend.db.backends.afe': 'south.db.mysql',
-    'autotest.frontend.db.backends.afe_sqlite': 'south.db.sqlite3'
-}
-
-SOUTH_DATABASE_ADAPTERS = {
-    'default': SOUTH_BACKENDS[AUTOTEST_DEFAULT['ENGINE']]
-}
-
 DATABASES = {'default': AUTOTEST_DEFAULT}
 
 # Local time zone for this installation. Choices can be found here:
@@ -120,7 +111,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'south'
 )
 
 AUTHENTICATION_BACKENDS = (
