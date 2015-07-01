@@ -2,7 +2,6 @@
 
 from django import forms
 from django.contrib import admin
-from django.db import models as dbmodels
 
 from autotest.frontend import settings
 from autotest.frontend.afe import model_logic, models
@@ -41,6 +40,7 @@ class AtomicGroupForm(ModelWithInvalidForm):
 
     class Meta:
         model = models.AtomicGroup
+        fields = '__all__'
 
 
 class AtomicGroupAdmin(SiteAdmin):
@@ -58,6 +58,7 @@ class LabelForm(ModelWithInvalidForm):
 
     class Meta:
         model = models.Label
+        fields = '__all__'
 
 
 class LabelAdmin(SiteAdmin):
@@ -86,6 +87,7 @@ class HostForm(ModelWithInvalidForm):
 
     class Meta:
         model = models.Host
+        fields = '__all__'
 
 
 class HostAdmin(SiteAdmin):
