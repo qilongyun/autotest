@@ -23,9 +23,6 @@ settings.DATABASES['default']['NAME'] = ':memory:'
 #
 settings.DEBUG = True
 
-
-# We have to update the south backend since the engine also gets changed here
-
 from django.db import connection
 from autotest.frontend.afe import readonly_connection
 from autotest.installation_support import database_manager

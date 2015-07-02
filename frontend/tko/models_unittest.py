@@ -42,9 +42,6 @@ class IterationAttributeTest(unittest.TestCase,
 
         This test, besides being what's obvious, also serves as a reminder:
 
-        Now that Django/south creates the database schema, whatever is set in
-        the models is respected, that is, no "fake tricks" go unpunished.
-
         The net effect is that a bug appears when trying to add multiple
         attributes/results to tko_iteration_attributes/tko_iteration_results.
         """
