@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
-from django.db import models
+from django.db import migrations
+from django.db import connection
 import logging
 
+db = connection.cursor()
 
-class Migration(SchemaMigration):
+class Migration(migrations.Migration):
 
     def forwards(self, orm):
         # on some systmes this constraint is created.

@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
+from django.db import migrations
+from django.db import connection
 from django.db import models
 
+db = connection.cursor()
 
-class Migration(SchemaMigration):
+
+class Migration(migrations.Migration):
 
     def forwards(self, orm):
         # Adding model 'TestEnvironment'
