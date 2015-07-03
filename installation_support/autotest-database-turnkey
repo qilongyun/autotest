@@ -20,6 +20,7 @@ try:
 except ImportError:
     import common
 
+from autotest.frontend import setup_django_environment
 from autotest.installation_support import database_manager
 from autotest.installation_support import global_config_set_value
 from autotest.client.shared import settings
