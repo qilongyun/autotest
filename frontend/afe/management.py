@@ -4,7 +4,7 @@ from django.db.models.signals import post_migrate
 BASIC_ADMIN = 'Basic admin'
 
 
-def create_admin_group(app, **kwargs):
+def create_admin_group(sender, **kwargs):
     """
     Create a basic admin group with permissions for managing basic autotest
     objects.
@@ -33,4 +33,4 @@ def create_admin_group(app, **kwargs):
     else:
         print 'Group "%s" already exists' % BASIC_ADMIN
 
-post_migrate.connect(create_admin_group)
+post_migrate.connect(create_admin_group, sender=None)
