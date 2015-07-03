@@ -26,7 +26,7 @@ def _get_config(config_key, default=None):
     return settings.get_value(_section, config_key, default=default)
 
 AUTOTEST_DEFAULT = {
-    'ENGINE': 'autotest.frontend.db.backends.afe',
+    'ENGINE': 'django.db.backends.mysql',
     'PORT': '',
     'HOST': _get_config("host"),
     'NAME': _get_config("database"),
