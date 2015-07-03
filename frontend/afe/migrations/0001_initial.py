@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from django.db import migrations
+import datetime
+from south.db import db
+from south.v2 import SchemaMigration
 from django.db import models
-from django.db import connection
 
-db = connection.cursor()
 
-class Migration(migrations.Migration):
+class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'AtomicGroup'
